@@ -1,10 +1,10 @@
 % ================================
 % 1. Inisialisasi
 % ================================
-filename = 'Bonjean.xlsx';
+filename = 'ALFAN BONJEAN.xlsx';
 sheet    = 'Sketsa Bonjean';
 
-filename1 = 'Excel Peluncuranrev.xlsx';
+filename1 = 'ALFAN PELUNCURAN TESSS.xlsx';
 sheet1    = 'Input WL luncur';
 
 % ====================================
@@ -93,7 +93,7 @@ yDataStep = [85.5175309211486, 0];
 % ================================================
 stationIdxLuas = (0:(nRowsLuas-1))';
 stationIdxSt   = (0:(nRowsSt-1))';
-stationIdxStep   = (0:(nRowsStep-1))';
+stationIdxStep   = 0;
 
 % ================================================
 % 7. Bangun tabel (opsional)
@@ -114,7 +114,7 @@ end
 
 TStep = table();
 TStep.Station = stationIdxStep;
-for j = 1:nColsStep
+for j = 1:size(xDataStep,2)
     TStep.(['X_col' num2str(j)]) = xDataStep(:,j);
     TStep.(['Y_col' num2str(j)]) = yDataStep(:,j);
 end
